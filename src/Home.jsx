@@ -1,12 +1,28 @@
 import React from 'react';
+import styles from "./Home.module.css"
 
 const Home = ()=> {
     return (<>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quia tempore impedit! Provident aliquid saepe reiciendis sunt! Quam nemo impedit harum aliquam, molestias pariatur sint blanditiis facilis, nihil corporis eaque!
-    <br/>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate necessitatibus aut molestiae? Iure ullam iste temporibus officiis quos tempore, ex alias itaque aspernatur dicta assumenda, excepturi, delectus praesentium recusandae ratione?
-    <br/>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatibus beatae quas quos autem reiciendis quam quis repellendus nisi commodi illo cum, iste blanditiis vero, a explicabo modi ad iusto.
+    <div className = "container">
+    <div className='row'>
+        <div className = "col-xl-5 p-2 m-2">
+        <img className={`${styles.imgHome}`} src = "https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=600" alt = "re"/>
+        <br/>
+        <img className={`${styles.imgHome}`} src = "https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=600" alt = "re"/>
+        <br/>
+        <img className={`${styles.imgHome}`} src = "https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=600" alt = "re"/>
+        </div>
+        
+        <div className = {`col-xl-5 p-2 m-2 ${styles.textSizer}`}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, labore autem. Laudantium atque, dolorem voluptas harum aperiam maxime nihil fuga facere accusantium, debitis ea eum vel fugiat labore suscipit error.
+            <br/>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, labore autem. Laudantium atque, dolorem voluptas harum aperiam maxime nihil fuga facere accusantium, debitis ea eum vel fugiat labore suscipit error.
+            <br/>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, labore autem. Laudantium atque, dolorem voluptas harum aperiam maxime nihil fuga facere accusantium, debitis ea eum vel fugiat labore suscipit error.
+            <br/>
+        </div>
+    </div>
+    </div>
     </>)
 }
 

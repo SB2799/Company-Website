@@ -51,10 +51,17 @@ ul{
   font-weight: 550;
 }
 
-.home-page-icon{
+.footer-bar-header{
+  background-color: rgb(54, 68, 98);
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 550;
+}
+
+.home-page-icon, .img-home{
   height: 3.2rem;
   width: 3.2rem;
-  object-fit: contain;
+  object-fit: cover;
   object-position: left;
   border-radius: 6.4rem;
   border: 1px solid saddlebrown;

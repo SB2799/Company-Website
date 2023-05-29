@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import styles from "./Login.css"
 
 const Login = ()=> {
 
@@ -19,7 +20,7 @@ const Login = ()=> {
         remove.splice(e,1);
         setDataAdder(remove);
         const decision = prompt("Are you sure you want to remove - Yes or No");
-        if(decision === "Yes"){
+        if(decision === "Yes" || decision === "yes" || decision === "Y" || decision === "y"){
             setDataAdder(remove);
         }
         else{
@@ -62,7 +63,7 @@ const Login = ()=> {
             </div>
 
         </div>
-
+        <br/>
         <div className="row ">
   <div className="d-flex justify-content-between">
     <h1>Name</h1>
@@ -91,6 +92,7 @@ const Login = ()=> {
             }
             </div>
         </div>
+        <div className = {`${styles.Setter}`}></div>
     </>)
 }
 

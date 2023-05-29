@@ -44,12 +44,38 @@ function App() {
             </div>
           </div>
         </header>
+        <div style = {{marginBottom : "3rem"}}></div>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/Home" element={<HomePage />} />
           <Route path="/Website" element={<Website />} />
           <Route path="/User Login" element={<Login />} />
         </Routes>
+        <div style = {{marginBottom : "3rem"}}></div>
+        <div className="container-fluid footer-bar-header">
+            <div className="row">
+              <div className="col-xl-4 col-md-3 col-sm-2">
+              </div>
+              <div className="col-xl-7 col-md-4 col-sm-2 d-flex p-3">
+                <footer>
+                  <ul className = "d-flex p-2 m-2">
+                    <li>
+                      <Link to="/" className='link-underline-remover m-2'>Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/Home" className='link-underline-remover m-2'>About</Link>
+                    </li>
+                    <li>
+                      <Link to="/Website" className='link-underline-remover m-2'>Contact</Link>
+                    </li>
+                    <li>
+                      <Link to="/User Login" className='link-underline-remover m-2'>Email</Link>
+                    </li>
+                  </ul>
+                </footer>
+              </div>
+            </div>
+          </div>
       </div>
   );
 }

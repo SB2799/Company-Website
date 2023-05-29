@@ -1,0 +1,13 @@
+.imgHome{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+
+.textSizer{
+  font-size: 1.5rem;
+  justify-content: stretch;
+}
