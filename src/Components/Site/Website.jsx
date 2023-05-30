@@ -20,7 +20,7 @@ const Website = () => {
 
   return (
     <>
-      <h1>The Movie Site</h1>
+      <h1>The Shopping Site</h1>
       <div className="container">
           {IdNum.map((element, index) => (
             <div key = {index}>

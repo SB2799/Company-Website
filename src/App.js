@@ -45,14 +45,16 @@ function App() {
           </div>
         </header>
         <div style = {{marginBottom : "3rem"}}></div>
-        <Routes>
+          <div className = 'content-wrap'>
+        <Routes >
           <Route path="/" element={<Home/>} />
           <Route path="/Home" element={<HomePage />} />
           <Route path="/Website" element={<Website />} />
           <Route path="/User Login" element={<Login />} />
         </Routes>
+          </div>
         <div style = {{marginBottom : "3rem"}}></div>
-        <div className="container-fluid footer-bar-header">
+        <div className="container-fluid  footer-bar-header">
             <div className="row">
               <div className="col-xl-4 col-md-3 col-sm-2">
               </div>

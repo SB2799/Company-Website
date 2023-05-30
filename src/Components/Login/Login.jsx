@@ -65,7 +65,7 @@ const Login = ()=> {
         </div>
         <br/>
         <div className="row ">
-  <div className="d-flex justify-content-between">
+  <div className="d-flex justify-content-between formBox">
     <h1>Name</h1>
     <h1>Email</h1>
     <h1>Address</h1>
@@ -75,11 +75,11 @@ const Login = ()=> {
   </div>
 </div>
         <br/>
-        <div className = "row  shadow-sm">
+        <div className = "row shadow-lg">
             {
                 DataAdder.map((e,i)=>{
-                    return (
-                        <div className = " d-flex justify-content-between m-3" key={i}>
+                    return (<>
+                        <div className = " d-flex justify-content-between m-3 " key={i}>
                             <p>{e.Name}</p>
                             <p>{e.Email}</p>
                             <p>{e.Address}</p>
@@ -87,7 +87,7 @@ const Login = ()=> {
                             <p>{e.State}</p>
                             <button draggable onClick = {() => removeData(i)} className = "btn btn-danger">Delete</button>
                         </div>
-                    )
+                        </> )
                 })
             }
             </div>

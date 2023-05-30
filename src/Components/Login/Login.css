@@ -2,3 +2,18 @@
     position : absolute;
     bottom : 5px;
 }
+
+.formBox{
+    box-sizing: border-box;
+    box-shadow: 0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.256);
+    transition: opacity 0.15s;
+}
+
+.formBox:hover{
+    box-shadow: 0.5rem 0.5rem 0.7rem rgba(0, 0, 0, 0.8);
+    opacity: 0.88;
+}
+
+button{
+    cursor: pointer;
+}

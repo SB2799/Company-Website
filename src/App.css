@@ -56,6 +56,15 @@ ul{
   font-size: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 550;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; 
+}
+
+.content-wrap{
+  min-height: calc(100% - 56px); 
+  padding-bottom: 56px;
 }
 
 .home-page-icon, .img-home{
