@@ -11,7 +11,8 @@
 
 .formBox:hover{
     box-shadow: 0.5rem 0.5rem 0.7rem rgba(0, 0, 0, 0.8);
-    opacity: 0.88;
+    opacity: 0.88; 
+    color : rgb(138, 123, 95)
 }
 
 button{

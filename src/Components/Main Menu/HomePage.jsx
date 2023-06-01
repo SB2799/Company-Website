@@ -1,13 +1,7 @@
 import React from "react";
-import { Link, NavLink,useNavigate, Outlet } from "react-router-dom";
+import { Link,useNavigate, Outlet } from "react-router-dom";
 
 const HomePage = ()=> {
-
-    const NavlinkCustomStyle = ({isDisplayed}) => (
-       { color : isDisplayed ? "blue" : "black",
-        opacity : isDisplayed ? "0.88" : "1"
-    }
-    );
 
     const usenav =  useNavigate();
 
@@ -26,7 +20,7 @@ const HomePage = ()=> {
             <br/>
             <div className = "d-flex align-items-center justify-content-center">
                 <div className = {`d-flex mx-3`}>
-            <NavLink  className = {`m-3`} style = {NavlinkCustomStyle} to={`/`}>Home</NavLink>
+            <Link  className = {`m-3`}  to={`/`}>Home</Link>
             <Link className = {`m-3`} to = "/Home/Custom">Message</Link>
             <button onClick={() => usenav(-1)} className = "btn btn-primary m-3">Go</button>
             <Outlet />

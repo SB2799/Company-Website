@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route, Link  } from 'react-router-dom';
+import { Routes, Route, Link, NavLink, Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import HomePage from './Components/Main Menu/HomePage';
@@ -12,6 +12,13 @@ import Error from './Error';
 
 
 function App() {
+
+  const NavlinkCustomStyle = ({isActive}) => {
+    return  { color : isActive ? "rgba(41, 29, 29, 0.256)" : "whitesmoke",
+      opacity : isActive ? "0.88" : "1"
+  }
+  }
+
   return (
       <div className="App">
         <header className="App-header">
@@ -30,18 +37,19 @@ function App() {
                 <nav>
                   <ul className = "d-flex p-2 m-2">
                     <li>
-                      <Link to="/" className='link-underline-remover m-2'>Home</Link>
+                      <NavLink style = {NavlinkCustomStyle} to="/" className='link-underline-remover m-2'>Home</NavLink>
                     </li>
                     <li>
-                      <Link to="/Home" className='link-underline-remover m-2'>About</Link>
+                      <NavLink style = {NavlinkCustomStyle} to="/Home" className='link-underline-remover m-2'>About</NavLink>
                     </li>
                     <li>
-                      <Link to="/Website" className='link-underline-remover m-2'>Website</Link>
+                      <NavLink style = {NavlinkCustomStyle} to="/Website" className='link-underline-remover m-2'>Website</NavLink>
                     </li>
                     <li>
-                      <Link to="/User Login" className='link-underline-remover m-2'>Login</Link>
+                      <NavLink style = {NavlinkCustomStyle} to="/User Login" className='link-underline-remover m-2'>Login</NavLink>
                     </li>
                   </ul>
+                  <Outlet/>
                 </nav>
               </div>
             </div>
