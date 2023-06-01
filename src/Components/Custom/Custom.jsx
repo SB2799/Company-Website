@@ -15,25 +15,33 @@ const Custom = () => {
 
     var messageOutput = "";
 
-    var hour = new Date().getHours();
+    var date = new Date();
+    var hour = date.getHours();
     
     // var second = new Date().getSeconds;
-    if(hour<12){
+    if(hour>=6 && hour<12){
         messageOutput = "Good Morning";
         // messageOutput = messageOutput + " " + hour + ":" + minute + ":" + second;
         CustomStyle.color = "blue";
         CustomStyle.backgroundColor = "lightblue";
     }
-    else if(hour>12 && hour<18)
+    else if(hour>=12 && hour<18)
     {
         messageOutput = "Good Afternoon";
         // messageOutput = messageOutput + " " + hour + ":" + minute + ":" + second;
         CustomStyle.color = "orange";
         CustomStyle.backgroundColor = "lightblue";
     }
-    else{
+    else if(hour>=18 && hour<23)
+    {
         messageOutput = "Good Evening";
-        CustomStyle.color = "red";
+        // messageOutput = messageOutput + " " + hour + ":" + minute + ":" + second;
+        CustomStyle.color = "wheat";
+        CustomStyle.backgroundColor = "lightblue";
+    }
+    else{
+        messageOutput = "Good Night";
+        CustomStyle.color = "rgba(41, 29, 29, 0.256)";
         CustomStyle.backgroundColor = "lightblue";
     }
     
