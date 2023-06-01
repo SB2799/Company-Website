@@ -20,7 +20,7 @@ const HomePage = ()=> {
             <br/>
             <div className = "d-flex align-items-center justify-content-center">
                 <div className = {`d-flex mx-3`}>
-            <Link  className = {`m-3`}  to={`/`}>Home</Link>
+            <Link  className = {`m-3`}  to={`/Website/:id`}>Unique</Link>
             <Link className = {`m-3`} to = "Custom">Message</Link>
             <button onClick={() => usenav(-1)} className = "btn btn-primary m-3">Go</button>
             <Outlet />

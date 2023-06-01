@@ -9,6 +9,7 @@ import Login from './Components/Login/Login';
 import Home from './Home';
 import Custom from './Components/Custom/Custom';
 import Error from './Error';
+import WebsiteParams from './Components/Custom/WebsiteParams';
 
 
 function App() {
@@ -64,6 +65,10 @@ function App() {
           <Route path="Custom" element={<Custom/>} />
           </Route>
           <Route path="/Website" element={<Website />} />
+            <Route path = "/Website">
+              <Route index element={<Website />} />
+              <Route path=":id" element={<WebsiteParams />} />
+            </Route>
           <Route path="/User Login" element={<Login />} />
           <Route path="*" element={<Error/>} />
         </Routes>

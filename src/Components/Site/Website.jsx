@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,} from 'react';
+import { Outlet } from 'react-router-dom';
 
 const Website = () => {
   const [IdNum, setIdNum] = useState([]);
@@ -17,6 +18,8 @@ const Website = () => {
 
     fetchData();
   }, []);
+  
+  // const id = useParam();
 
   return (
     <>
@@ -38,6 +41,7 @@ const Website = () => {
             </div>
           ))}
         </div>
+        <Outlet/>
     </>
   );
 }
