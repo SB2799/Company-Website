@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link  } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import HomePage from './Components/Main Menu/HomePage';
 import Website from './Components/Site/Website';
 import Login from './Components/Login/Login';
 import Home from './Home';
+import Custom from './Components/Custom/Custom';
+import Error from './Error';
+
 
 function App() {
   return (
@@ -48,9 +51,13 @@ function App() {
           <div className = 'content-wrap'>
         <Routes >
           <Route path="/" element={<Home/>} />
-          <Route path="/Home" element={<HomePage />} />
+          <Route path="/Home" >
+          <Route index element={<HomePage />} />
+          <Route path="Custom" element={<Custom/>} />
+          </Route>
           <Route path="/Website" element={<Website />} />
           <Route path="/User Login" element={<Login />} />
+          <Route path="*" element={<Error/>} />
         </Routes>
           </div>
         <div style = {{marginBottom : "3rem"}}></div>
