@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Routes, Route, Link, NavLink, Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {createContext, useState, useEffect} from "react";
 
 import HomePage from './Components/Main Menu/HomePage';
 import Website from './Components/Site/Website';
@@ -10,10 +11,25 @@ import Home from './Home';
 import Custom from './Components/Custom/Custom';
 import Error from './Error';
 import WebsiteParams from './Components/Custom/WebsiteParams';
+// import ContextImage from './ContextImage';
 
 
-function App() {
+const contextImageProviders = createContext();
 
+  
+  function App() {
+
+    const[tree, setTree] = useState([]);
+
+    useEffect(()=>{
+      const ContextData = async() => {
+        const TreeApi = await fetch ("https://fakestoreapi.com/products");
+        const TreeJson = await TreeApi.json();
+        setTree(TreeJson);
+      };
+      ContextData();
+    },[])
+    
   const NavlinkCustomStyle = ({isActive}) => {
     return  { color : isActive ? "rgba(41, 29, 29, 0.256)" : "whitesmoke",
       opacity : isActive ? "0.88" : "1"
@@ -21,9 +37,12 @@ function App() {
   }
 
   return (
+    <>
+    <contextImageProviders.Provider value = {tree}>
       <div className="App">
         <header className="App-header">
           <div className="container nav-bar-header">
+         
             <div className="row">
               <div className="col-xl-4 col-md-3 col-sm-2">
                 <div className='img-space'>
@@ -66,8 +85,8 @@ function App() {
           </Route>
           <Route path="/Website" element={<Website />} />
             <Route path = "/Website">
-              <Route index element={<Website />} />
               <Route path=":id" element={<WebsiteParams />} />
+              <Route index element={<Website />} />
             </Route>
           <Route path="/User Login" element={<Login />} />
           <Route path="*" element={<Error/>} />
@@ -99,7 +118,10 @@ function App() {
             </div>
           </div>
       </div>
+      </contextImageProviders.Provider>
+      </>
   );
 }
 
 export default App;
+export {contextImageProviders};
