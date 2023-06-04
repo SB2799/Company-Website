@@ -15,9 +15,10 @@ const ContextImage = () => {
     previousCount.current = name;
   },[name])
 
-  const refClick = () => (
+  const refClick = () => {
+    refDOM.current.focus()
     refDOM.current.style.border = "1px solid red"
-  )
+  }
 
 
   const changeInfo = (e) => {
