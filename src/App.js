@@ -11,7 +11,7 @@ import Home from './Home';
 import Custom from './Components/Custom/Custom';
 import Error from './Error';
 import WebsiteParams from './Components/Custom/WebsiteParams';
-// import ContextImage from './ContextImage';
+
 
 
 const contextImageProviders = createContext();
