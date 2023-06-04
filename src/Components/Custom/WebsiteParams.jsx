@@ -46,14 +46,11 @@ const WebsiteParams = () => {
         <h1>The Shopping Site</h1>
         <div className="container">
             {IdNum.map((element, index) => (
-            <NavLink to = {`/Website/${element.id}`} className= {`m-3 p-3`} style = {LinkUnderlineRemover}>  <div key = {index}>
-                  <div className = "row">
-              <div className="m-3"> 
-
+            <NavLink to = {`/Website/${element.id}`} className= {`m-3 p-3`} style = {LinkUnderlineRemover} key = {index}>  
+            <div>
+                  <div className = "row" >
                 <h1>{element.price}</h1>
                 <h1>{element.description}</h1>
-                
-              </div>
               </div>
               </div>
               </NavLink>
