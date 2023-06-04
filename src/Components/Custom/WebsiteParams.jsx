@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import { useParams, NavLink, Outlet } from 'react-router-dom';
 import { useSearchParams } from 'react-router-dom';
+import ContextImage from '../../ContextImage';
 
 
 const WebsiteParams = () => {
@@ -65,6 +66,9 @@ const WebsiteParams = () => {
             <button className = "btn btn-primary m-4 p-2" onClick={paramsSetter}>Reset</button>
            </div>
             <Outlet/>
+            <br/>
+            <br/>
+            <ContextImage />
       </>
     )
 }

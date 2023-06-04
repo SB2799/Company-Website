@@ -7,7 +7,7 @@ const ContextImage = () => {
 
   return (
     <>
-      <div>ContextImage</div>
+      <h1>ContextImage rendered through Context API</h1>
       <br />
       <div className="container">
         <div className="row">
